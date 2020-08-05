@@ -1,0 +1,26 @@
+{
+  "name": "yahoo-finance",
+  "version": "1.0.0",
+  "description": "basic API app ## Dependencies - Chart.js - Dotenv",
+  "main": "api.js",
+  "dependencies": {
+    "chart.js": "^2.9.3",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redricasa/yahoo-finance.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/redricasa/yahoo-finance/issues"
+  },
+  "homepage": "https://github.com/redricasa/yahoo-finance#readme"
+}
