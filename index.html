@@ -7,6 +7,36 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 </head>
 <body>
-    <!-- canvas tag to didsplay chart height: 400px width: 800px -->
+    <!-- canvas tag to didsplay chart  -->
+    <canvas id="myChart" width="800" height="400"></canvas>
+    <!-- chart.js script to display the chart -->
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    fill: false,
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor:                     
+                        'rgba(54, 162, 235, 0.2)',
+                    borderColor: 
+                        'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+        </script>
 </body>
 </html>
