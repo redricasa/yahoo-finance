@@ -4,6 +4,7 @@
   "description": "basic API app ## Dependencies - Chart.js - Dotenv",
   "main": "api.js",
   "dependencies": {
+    "axios": "^0.19.2",
     "chart.js": "^2.9.3",
     "dotenv": "^8.2.0"
   },

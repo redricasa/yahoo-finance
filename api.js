@@ -1,7 +1,16 @@
 const axios = require("axios");
 // configuring the dotenv so that I can use process.env
 const dotenv = require('dotenv');
-dotenv.config();
+const result= dotenv.config();
+// if (result.error) {
+//     throw result.error;
+// }
+// const { parsed: envs } = result;
+// console.log(envs);
+// module.exports = envs;
+
+// const { endpoint, masterKey, port } = require('./config');
+
 // AXIOS syntax to get response from rapid api 
 axios({
     "method":"GET",
@@ -21,8 +30,8 @@ axios({
     }
 })
 .then((response)=>{
-    console.log(response)
+    console.log('RESPONSE-------------------- /n', response)
 })
 .catch((error)=>{
-    console.log(error)
+    console.log('ERROR--------------------  /n', error)
 })
