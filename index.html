@@ -11,32 +11,37 @@
     <canvas id="myChart" width="800" height="400"></canvas>
     <!-- chart.js script to display the chart -->
     <script>
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                datasets: [{
-                    label: '# of Votes',
-                    fill: false,
-                    data: [12, 19, 3, 5, 2, 3],
-                    backgroundColor:                     
-                        'rgba(54, 162, 235, 0.2)',
-                    borderColor: 
-                        'rgba(54, 162, 235, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
+        // declare global variables for the x and y axis data points
+
+        
+        chartIt();
+        // make the creation of the chart asyncronous to work with getData() async function
+        async function chartIt(){
+            // waits until there's data before charting
+            await getData()
+            const ctx = document.getElementById('myChart').getContext('2d');
+            const xlabels = [];
+            const myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: xlabels,
+                    datasets: [{
+                        label: 'Yahoo Finance Stocks chart',
+                        fill: false,
+                        data: [12, 19, 3, 5, 2, 3],
+                        borderColor: 
+                            'rgba(54, 162, 235, 1)',
+                        borderWidth: 2
                     }]
                 }
-            }
-        });
-        </script>
+            });
+        };
+        getData();
+
+        async function getData(){
+
+        }
+
+    </script>
 </body>
 </html>

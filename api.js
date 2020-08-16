@@ -2,14 +2,15 @@ const axios = require("axios");
 // configuring the dotenv so that I can use process.env
 const dotenv = require('dotenv');
 const result= dotenv.config();
-// if (result.error) {
-//     throw result.error;
-// }
-// const { parsed: envs } = result;
-// console.log(envs);
-// module.exports = envs;
 
-// const { endpoint, masterKey, port } = require('./config');
+async function getStock(){
+    try{
+        const response = await axios.get();
+        console.log("Response-----: ", response);
+    }catch(error){
+        console.log("Error-----: ", error)
+    }
+}
 
 // AXIOS syntax to get response from rapid api 
 axios({
@@ -25,8 +26,8 @@ axios({
         "region":"US",
         "lang":"en",
         "symbol":"APPL",
-        "interval":"1wk",
-        "range":"6mo"
+        "interval":"5m",
+        "range":"1d"
     }
 })
 .then((response)=>{
@@ -35,3 +36,4 @@ axios({
 .catch((error)=>{
     console.log('ERROR--------------------  /n', error)
 })
+
