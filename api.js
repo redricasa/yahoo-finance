@@ -3,21 +3,12 @@ const axios = require("axios");
 const dotenv = require('dotenv');
 const result= dotenv.config();
 
-async function getStock(){
-    try{
-        const response = await axios.get();
-        console.log("Response-----: ", response);
-    }catch(error){
-        console.log("Error-----: ", error)
-    }
-}
-
 // AXIOS syntax to get response from rapid api 
 axios({
     "method":"GET",
     "url":process.env.API_URL,
     "headers":{
-        "content-type":"application/octet-stream",
+        "content-type":"application/json",
         "x-rapidapi-host":"apidojo-yahoo-finance-v1.p.rapidapi.com",
         "x-rapidapi-key":process.env.API_KEY,
         "useQueryString":true
@@ -37,3 +28,11 @@ axios({
     console.log('ERROR--------------------  /n', error)
 })
 
+// async function getStock(){
+//     try{
+//         const response = await axios.get();
+//         console.log("Response-----: ", response);
+//     }catch(error){
+//         console.log("Error-----: ", error)
+//     }
+// }
