@@ -28,11 +28,3 @@ axios({
     console.log('ERROR--------------------  /n', error)
 })
 
-// async function getStock(){
-//     try{
-//         const response = await axios.get();
-//         console.log("Response-----: ", response);
-//     }catch(error){
-//         console.log("Error-----: ", error)
-//     }
-// }
