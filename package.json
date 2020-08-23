@@ -7,6 +7,7 @@
     "axios": "^0.19.2",
     "chart.js": "^2.9.3",
     "dotenv": "^8.2.0",
+    "pandas-js": "^0.2.4",
     "unirest": "^0.6.0"
   },
   "devDependencies": {},
