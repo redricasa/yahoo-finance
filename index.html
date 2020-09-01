@@ -23,13 +23,17 @@
                     "data":response.data.chart.result[0].indicators.quote[0],
                     "xlabels":response.data.chart.result[0].timestamp
                         .map(
-                            timeStamp => new Date(timeStamp).toDateString()
+                            timeStamp => new Date(timeStamp*1000).toDateString()
                         )
                 })
             })
             .catch((error)=>{
                 console.log('ERROR--------------------  /n', error)
             })
+            // this has one of the timestamps returned from the API- has 10 digits
+            console.log("date : ", new Date(1598984951).toUTCString());
+            // this gets 13 digits
+            console.log("milliseconds since jan 1st, 1970 : ", new Date().getTime());
     </script>
 </body>
 </html>
