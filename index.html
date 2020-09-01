@@ -23,7 +23,7 @@
                     "data":response.data.chart.result[0].indicators.quote[0],
                     "xlabels":response.data.chart.result[0].timestamp
                         .map(
-                            timeStamp => new Date(timeStamp).toString()
+                            timeStamp => new Date(timeStamp).toDateString()
                         )
                 })
             })
